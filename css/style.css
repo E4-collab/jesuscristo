@@ -9,6 +9,7 @@
     box-sizing: border-box;
     font-family: 'Hanken Grotesk', sans-serif;
     color: whitesmoke;
+    background-color: #0b0101;
 }
 
 .container {
@@ -58,6 +59,7 @@ span {
     margin-bottom: 0;
     height: max-content;
     font-weight: bolder;
+    display: flexbox;
 }
 
 .text-two > h2 {
@@ -68,6 +70,27 @@ span {
 
 .text-jesus {
     font-size: 2.7rem;
+}
+
+.content, .text, .text-jesus, .text-two, .text > span {
+    background: transparent;
+}
+
+footer {
+    text-align: center;
+    font-size: .8rem;
+}
+
+footer > p {
+    padding-bottom: 6px;
+}
+strong {
+    color: orange;
+}
+
+strong:hover {
+    text-decoration: underline;
+    background: radial-gradient(rgba(255, 166, 0, 0.429), rgba(255, 255, 255, 0) );
 }
 
 @media (max-width: 900px) {
@@ -83,20 +106,6 @@ span {
     }
 }
 
-footer {
-    padding-bottom: 6px;
-    text-align: center;
-    font-size: .8rem;
-}
-
-strong {
-    color: orange;
-}
-
-strong:hover {
-    text-decoration: underline;
-    background: radial-gradient(rgba(255, 166, 0, 0.429), rgba(255, 255, 255, 0) );
-}
 @media (max-width: 800px) {
     .container {
         background: url(../img/jesus-tablet2.png);
@@ -106,6 +115,7 @@ strong:hover {
 @media (max-width: 700px) {
     .container {
         background: url(../img/jesus-tablet3.png);
+        padding-top: 1rem;
     }
 
     .content {
@@ -130,13 +140,14 @@ strong:hover {
 
 @media (max-width: 600px) {
     .container {
-        background: url(../img/jesus-tablet4.png);
+        background: url(../img/jesus-mobile.png);
+        height: 918px;
     }
 
     .content {
-        height: 90vh;
         margin-top: 0;
         margin-left: 2rem;
+        height: 700px;
     }
 
     .text-jesus {
@@ -154,5 +165,15 @@ strong:hover {
     .text-two .text {
         font-size: 1.5rem;
         font-weight: bolder;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        background-position-x: -100px;
+    }
+
+    .text-two .text {
+        font-size: 1.3rem;
     }
 }
